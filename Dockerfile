@@ -21,5 +21,5 @@ RUN apt-get update && \
 		# rm -r /tmp/pgvector && \
 		# apt-get remove -y build-essential postgresql-server-dev-$PG_MAJOR && \
 		apt-get autoremove -y && \
-		apt-mark unhold locales
+		# apt-mark unhold locales
 		# rm -rf /var/lib/apt/lists/*
