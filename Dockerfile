@@ -19,7 +19,7 @@ RUN apt-get update && \
 		mkdir /usr/share/doc/pgvector && \
 		cp LICENSE README.md /usr/share/doc/pgvector && \
 		# rm -r /tmp/pgvector && \
-		apt-get remove -y build-essential postgresql-server-dev-$PG_MAJOR && \
+		# apt-get remove -y build-essential postgresql-server-dev-$PG_MAJOR && \
 		apt-get autoremove -y && \
 		apt-mark unhold locales
 		# rm -rf /var/lib/apt/lists/*
