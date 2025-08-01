@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 ARG PG_MAJOR=14
-FROM postgres:14
+FROM openshift/postgresql:$PG_MAJOR
 ARG PG_MAJOR
 
 # ADD https://github.com/pgvector/pgvector.git#v0.8.0 /tmp/pgvector
