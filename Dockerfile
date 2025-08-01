@@ -1,8 +1,7 @@
 # syntax=docker/dockerfile:1
 
 ARG PG_MAJOR=17
-ARG DEBIAN_CODENAME=bookworm
-FROM postgres:$PG_MAJOR-$DEBIAN_CODENAME
+FROM bitnami/postgresql:17.5
 ARG PG_MAJOR
 
 # ADD https://github.com/pgvector/pgvector.git#v0.8.0 /tmp/pgvector
