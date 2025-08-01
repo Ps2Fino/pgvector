@@ -10,7 +10,7 @@ COPY . .
 
 RUN apt-get update && \
 		apt-mark hold locales && \
-		apt-get install -y --no-install-recommends build-essential postgresql-server-dev-$PG_MAJOR && \
+		# apt-get install -y --no-install-recommends build-essential postgresql-server-dev-$PG_MAJOR && \
 		# cd /tmp/pgvector && \
   		cd /app && \
 		make clean && \
