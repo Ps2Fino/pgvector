@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
-ARG PG_MAJOR=17
-FROM postgres:17.5.0
+ARG PG_MAJOR=14
+FROM postgres:14
 ARG PG_MAJOR
 
 # ADD https://github.com/pgvector/pgvector.git#v0.8.0 /tmp/pgvector
@@ -20,6 +20,6 @@ RUN apt-get update && \
 		cp LICENSE README.md /usr/share/doc/pgvector && \
 		# rm -r /tmp/pgvector && \
 		apt-get remove -y build-essential postgresql-server-dev-$PG_MAJOR && \
-		apt-get autoremove -y
-		apt-mark unhold locales
+		apt-get autoremove -y && \
+		apt-mark unhold locales && \
 		rm -rf /var/lib/apt/lists/*
