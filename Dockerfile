@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 ARG PG_MAJOR=17
-FROM bitnami/postgresql:17.5
+FROM bitnami/postgresql:17.5.0
 ARG PG_MAJOR
 
 # ADD https://github.com/pgvector/pgvector.git#v0.8.0 /tmp/pgvector
